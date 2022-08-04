@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고먐미</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            <a href="/">고먐미</a>
+            고먐미
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#m01"></a>고먐미01</li>
+                <li><a href="#m02"></a>고먐미02</li>
+                <li><a href="#m03"></a>고먐미03</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="m01">
+        <figure>
+            <img src="./img/02.jpg" alt="">
+        </figure>
+        <h2>하윙</h2>
+        <p>안녕하세오</p>
+    </section>
+    <section id="m02">
+        <figure>
+            <img src="./img/05.jpeg" alt="">
+        </figure>
+        <h2>하윙</h2>
+        <p>안녕하세오</p>
+    </section>
+    <section id="m03">
+        <figure>
+            <img src="./img/06.jpeg" alt="">
+        </figure>
+        <h2>하윙</h2>
+        <p>안녕하세오</p>
+    </section>
+
+    <div class="mopen">
+        <span></span><span></span><span></span><span></span>
+    </div>
+
+    <script>
+        $('.mopen').on('click', function(){
+            $(this).toggleClass('on');
+            $('nav').toggleClass('on');
+        });
+
+        $('nav a').on('click',function(e){
+            e.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top})
+            $('.mopen').toggleClass('on');
+            $('nav').toggleClass('on');
+        });
+    </script>
+</body>
+
+</html>
